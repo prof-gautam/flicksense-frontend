@@ -1,0 +1,96 @@
+/* RecommendationStyles.css */
+.recommendation-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .search-area {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+    color: #fff;
+    position: relative; /* To position the search button absolutely within this container */
+
+  }
+  
+  .search-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+  }
+  
+  .input-field {
+    flex-grow: 1;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 30px 0 0 30px; /* Rounded left corners */
+    font-size: 1rem;
+    outline: none;
+    border-right: none; /* Remove border in between input and button */
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #6200ee;
+    color: white;
+    border-radius: 0 30px 30px 0; /* Rounded right corners */
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    border-left: none; /* Remove border in between input and button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #7a4df8; /* A lighter purple for hover state */
+  }
+  
+  .search-button:disabled {
+    background-color: #aaa; /* A neutral color for disabled state */
+    cursor: not-allowed;
+  }
+  
+  /* Animation for the loader */
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  
+  /* Ensure the recommendation list items have spacing and better visual separation */
+  .recommendation-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px; /* Spacing after the search button */
+  }
+  
+  .recommendation-item {
+    background: #f0f0f0;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border-left: 5px solid #6200ee;
+    font-size: 1rem;
+  }
